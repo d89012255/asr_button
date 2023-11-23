@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<!-- 手機版縮放 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>Mlogging網頁呈現</title>
+	<!-- css連結 -->
+	<link href="css/mystyle.css" rel="stylesheet">	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/recorder-core.js" onerror="!window.onBadCDN||onBadCDN()" onload="!window.onOKCDN||onOKCDN()"></script>
+
+    <script src="js/engine/mp3.js"></script>
+    <script src="js/engine/wav.js"></script>
+    <script src="js/engine/mp3-engine.js"></script>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index7.html"><img class ="navbar-brand-img" src="img/凱柏語音辨識系統.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+		  </button>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item"><a class="nav-link" href="index7.html">線上錄音</a></li>
+			  <li class="nav-item"><a class="nav-link" href="machine.html">機台狀況</a></li>
+			</ul>
+		  </div>
+	</nav>
+	<div class="newest">
+		<div class="container-fluid">			
+            <div class="machine">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="旋轉軸">旋轉軸：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="旋轉軸1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="旋轉軸2" type="text">                        
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="機械手臂">機械手臂：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="機械手臂1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="機械手臂2" type="text">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="machine">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="切削機">切削機：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="切削機1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="切削機2" type="text">
+                        
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="工具機">工具機：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="工具機1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="工具機2" type="text">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="machine">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="臥式洗床">臥式洗床：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="臥式洗床1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="臥式洗床2" type="text">
+                        
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="刀具磨床">刀具磨床：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="刀具磨床1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="刀具磨床2" type="text">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+          
+            <div class="machine">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="車床">車床：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="車床1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="車床2" type="text">
+                        
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="磨床">磨床：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="磨床1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="磨床2" type="text">
+                        
+                    </div>
+                   
+                </div>
+            </div>
+           
+            <div class="machine">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="線切割">線切割：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="線切割1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="線切割2" type="text">
+                        
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="try_color" id="雷雕機">雷雕機：</p>
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="雷雕機1" type="text">
+
+                    </div>
+                    <div class="col-1 text_bank">
+                        <input class = "textbox" id="雷雕機2" type="text">
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="是">是</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="否">否</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="確定">確定</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="取消">取消</p>
+                    </div>
+                                      
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="上一組">上一組</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="下一組">下一組</p>
+                    </div>  
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="第一組">第一組</p>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="上一筆">上一筆</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="下一筆">下一筆</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="第一筆">第一筆</p>
+                    </div>
+                    
+
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="暫存">暫存</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="上傳">上傳</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="鎖定">鎖定</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="上一點">上一點</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="下一點">下一點</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="上一頁">上一頁</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="下一頁">下一頁</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="紀錄">紀錄</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="清除">清除</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="正">正</p>
+                    </div>
+                    <div class="col-1 text-left">
+                        <p class="label_word" id="負">負</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+            <div class="side">
+                <div class="row">
+              
+                    <div class="col-1 text-left">
+                        <input class = "my-btn" id="myBtnStart" type="button" value="開始辨識">
+                    </div>    
+               
+                </div>
+                <div class="row">
+                   
+                        <div class="col-1 text-left">
+                            <input class = "my-btn" id="myBtnPlay" type="button" value="結束辨識">     
+                        </div>	
+                  
+                </div>
+
+            </div>
+            <div class="recog">
+                <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-5 text-center">
+                        <h3 class="title3">手勢辨識影像串流</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-5">
+                        <video id="video" width="686.94" height="300" autoplay></video>
+                        <canvas id="canvas" width="686.94" height="500" style="display:none;"></canvas>
+
+                        <script>
+                            var video = document.getElementById('video');
+                            var canvas = document.getElementById('canvas');
+                            var ctx = canvas.getContext('2d');
+
+                            navigator.mediaDevices.getUserMedia({ video: true })
+                                .then(function(stream) {
+                                    video.srcObject = stream;
+                                    startCapturing(stream);
+                                })
+                                .catch(function(error) {
+                                    console.log('打开摄像头失败: ' + error.message);
+                                });
+
+                            function startCapturing(stream) {
+                                setInterval(function() {
+                                    // 在canvas上繪製攝影機所拍攝圖像
+                                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                                    // 獲取圖像數據
+                                    var imageData = canvas.toDataURL('image/jpeg'); // 可以选择其他格式
+
+                                    // 將圖像發送至php
+                                    var formData = new FormData();
+                                    formData.append('image', imageData);
+
+                                    fetch('./video_server.php', {
+                                        method: 'POST',
+                                        body: formData
+                                    })
+                                    .then(function(response) {
+                                        if (response.ok) {
+                                            console.log('圖片成功送出');
+                                        } else {
+                                            console.error('送出失敗');
+                                        }
+                                    })
+                                    .catch(function(error) {
+                                        console.error('發送過程錯誤: ' + error.message);
+                                    });
+                                }, 3000); // 每三秒拍照一次
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-5 text-center">
+                        <h3 class="title4">辨識結果</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-5">
+                        <input class = "textbox2" id="result" type="text">
+                    </div>
+                </div>
+
+            </div>
+            
+		
+	</div>
+    <footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 text-center">
+					<p>Copyright Danny 2022</p>
+				</div>
+				<div class="col-1"></div>
+			</div>
+		</div>
+	</footer>	
+	
+    
+
+	<!-- JS連結 -->
+	<script src="js/jQuery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script type="module" src="./js/temp_wav.js"></script>
+	
+	
+	
+</body>
+</html>
+
+

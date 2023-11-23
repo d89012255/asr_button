@@ -1,0 +1,4 @@
+PHP 可能會用到的函式庫
+如果要把音檔從mp3轉wav需下載ffmpeg
+Python 可能會用到的函式庫
+pip install azure-cognitiveservices-speech
